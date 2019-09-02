@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style_location.css">
+    <script src="../jquery-3.4.1.min.js"></script>
     <title>Document</title>
 </head>
 
@@ -14,22 +15,38 @@
             <input type="text" id="titre" placeholder="Titre descriptif de la location" autofocus>
             <div id="decription">
                 <div id="description_gauche">
-                    <input type="number" placeholder="Superficie en m²">
-                    <input type="number" placeholder="Nombre de chambres">
-                    <input type="number" placeholder="Nombre de salle de bain">
+                    <input type="number" id="superficie" placeholder="Superficie en m²">
+                    <input type="number" id="chambre" placeholder="Nombre de chambres">
+                    <input type="number" id="salle_bain" placeholder="Nombre de salle de bain">
                 </div>
                 <div id="description_droite">
-                    <div><spans id="oui">OUI</spans><spans id="non">NON</spans></div>
-                    <div id="cuisine">Cuisine<input type="radio" id="cuisine_oui" name="cuisine"><input type="radio" id="cuisine_non" name="cuisine"></div>
-                    <div id="wifi">Wi-Fi<input type="radio" id="wifi_oui" name="wifi"><input type="radio" id="wifi_non" name="wifi"></div>
-                    <div id="television">Télévision<input type="radio" id="television_oui" name="tele"><input type="radio" id="television_non" name="tele"></div>
+                    <div>
+                        <spans id="oui">OUI</spans>
+                        <spans id="non">NON</spans>
+                    </div>
+                    <div id="cuisine">
+                        <span>Cuisine</span>
+                        <input type="radio" id="cuisine_oui" name="cuisine" value="oui" checked>
+                        <input type="radio" id="cuisine_non" name="cuisine" value="non">
+                    </div>
+                    <div id="wifi">
+                        <span>Wi-Fi</span>
+                        <input type="radio" id="wifi_oui" name="wifi" value="oui" checked>
+                        <input type="radio" id="wifi_non" name="wifi" value="non">
+                    </div>
+                    <div id="television">
+                        <span>Télévision</span>
+                        <input type="radio" id="tele_oui" name="tele" value="oui" checked>
+                        <input type="radio" id="tele_non" name="tele" value="non">
+                    </div>
                 </div>
             </div>
             <input type="number" id="prix" placeholder="Prix €">
             <div id="image"></div>
-            <button id="valider">Valider</button>
+            <button id="valider" onclick="louer()">Valider</button>
         </div>
     </div>
 </body>
+<script src="logic_location.js"></script>
 
 </html>

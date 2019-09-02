@@ -1,0 +1,25 @@
+body {
+    background-image: url(../img/bg1.jpg);
+    background-size: 100vw 100vh;
+}
+
+#main {
+    height: 95vh;
+    width: 95vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+button{
+    width: 30vw;
+    height: 9vh;
+    border-radius: 20px;
+    font-size: 1.4em;
+    font-weight: 100;
+    color: white;
+    outline: none;
+    margin: 5vh;
+    background-image: url(../img/bg1.jpg);
+    background-size: 30vw 9vh;
+}

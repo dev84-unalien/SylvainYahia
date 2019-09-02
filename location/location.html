@@ -1,11 +1,35 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style_location.css">
     <title>Document</title>
 </head>
+
 <body>
-    
+    <div id="main">
+        <div id="formulaire">
+            <input type="text" id="titre" placeholder="Titre descriptif de la location" autofocus>
+            <div id="decription">
+                <div id="description_gauche">
+                    <input type="number" placeholder="Superficie en m²">
+                    <input type="number" placeholder="Nombre de chambres">
+                    <input type="number" placeholder="Nombre de salle de bain">
+                </div>
+                <div id="description_droite">
+                    <div><spans id="oui">OUI</spans><spans id="non">NON</spans></div>
+                    <div id="cuisine">Cuisine<input type="radio" id="cuisine_oui" name="cuisine"><input type="radio" id="cuisine_non" name="cuisine"></div>
+                    <div id="wifi">Wi-Fi<input type="radio" id="wifi_oui" name="wifi"><input type="radio" id="wifi_non" name="wifi"></div>
+                    <div id="television">Télévision<input type="radio" id="television_oui" name="tele"><input type="radio" id="television_non" name="tele"></div>
+                </div>
+            </div>
+            <input type="number" id="prix" placeholder="Prix €">
+            <div id="image"></div>
+            <button id="valider">Valider</button>
+        </div>
+    </div>
 </body>
+
 </html>

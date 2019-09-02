@@ -1,0 +1,75 @@
+body {
+    background-image: url(../img/bg1.jpg);
+    background-size: 100vw 100vh;
+}
+
+#main {
+    height: 95vh;
+    width: 95vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#formulaire {
+    height: 90vh;
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#decription {
+    width: 40vw;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#description_gauche{
+    margin-top: 4vh;
+display: flex;
+flex-direction: column;
+}
+
+#description_droite{
+color: white;
+font-size: 0.6em;
+
+display: flex;
+flex-direction: column;
+justify-content: space-evenly;
+align-items: flex-end;
+}
+
+#cuisine_oui, #wifi_oui, #television_oui, #oui{
+    margin-right: 1vw;
+}
+#cuisine, #wifi, #television{    
+font-size: 13px;
+}
+
+#image {
+    height: 40vh;
+    width: 50vw;
+    background-image: url(../img/chambre1.jpg);
+    background-size: 50vw 40vh;
+    background-repeat: no-repeat;
+}
+
+#titre {
+    width: 40vw;
+}
+
+#prix {
+    margin-top: 5vh;
+    width: 10vw;
+}
+
+#valider{    
+    width: 30vw;
+    margin-top: 2vh;
+    border-radius: 10px;
+}

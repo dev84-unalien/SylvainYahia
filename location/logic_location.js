@@ -21,7 +21,7 @@ function louer() {
         var tele = "non";    };
  
    $.ajax({
-    url: "http://localhost/sylvainyahia/location.php",
+    url: "http://localhost/SylvainYahia/location/location.php",
     type: "POST",
     data: {
         titre: titre,

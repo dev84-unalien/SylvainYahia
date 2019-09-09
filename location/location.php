@@ -13,7 +13,7 @@ $tele = $_POST['tele'];
 $prix = $_POST['prix'];
 
 
-// Vérifier que toutes les informations ont bien été envoyé
+// Vérifier que toutes les informations ont bien été envoyé // !$titre indique si champs de saisie nul ou mal saisie
 if (!$titre || !$superficie || !$chambre|| !$salle_bain || !$cuisine|| !$wifi || !$tele|| !$prix) {
     echo "Le formulaire est mal rempli";
     exit(); // On termine le programme
@@ -21,7 +21,7 @@ if (!$titre || !$superficie || !$chambre|| !$salle_bain || !$cuisine|| !$wifi ||
 
 
 // Il faut établir une connexion avec la base de donnée
-$connection = new mysqli("localhost", "root", "", "sylvainyahia");
+$connection = new mysqli("localhost", "root", "", "sylvain_yahia");
 // Il faut préparer la requete SQL
 // $request = $connection->prepare("INSERT INTO utilisateur (id, mail, mdp) VALUES (NULL, ?, ?)");
 $request = $connection->prepare("INSERT INTO `location` (`titre`, `superficie`, `nbChambre`, `nbSalleDeBain`, `cuisine`, `wifi`, `television`, `prix`) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");

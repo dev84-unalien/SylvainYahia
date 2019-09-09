@@ -8,9 +8,9 @@ $email = $_POST['email'];
 
 
 // Il faut établir une connexion avec la base de donnée
-$connection = new mysqli("localhost", "root", "", "mabdd");
+$connection = new mysqli("localhost", "root", "", "sylvain_yahia");
 // Il faut préparer la requete SQL
-$request = $connection->prepare("INSERT INTO utilisateur (nom, prenom,email) VALUES (?, ?, ?)");
+$request = $connection->prepare("INSERT INTO utilisateurs (nom, prenom,email) VALUES (?, ?, ?)");
 // On renseigne les valeurs dynamiques de la requete
 $request->bind_param("sss", $nom, $prenom, $email);
 // On execute la requete

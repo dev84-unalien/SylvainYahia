@@ -1,4 +1,5 @@
-$ (document).ready (function () { //on utilise document.ready pour qu'a chaque actualisation de page la function enregistrement s'active.
+$ (document).ready (function () {
+ 
   enregistrement ();
 });
 
@@ -9,8 +10,9 @@ function reservation () {
   let valEmail = $ ('#email').val ();
 
   // On execute une requete ajax avec les valeurs d'inputs
-  $.ajax ({ // ne pas oublier de mettre le jquery dans le dossier reservation
-    url: 'http://localhost/reservation.php',
+  $.ajax ({
+    
+    url: 'http://localhost/SylvainYahia/reservation/reservation.php',
     type: 'POST',
     data: {
       nom: valDuNom,
@@ -27,21 +29,30 @@ function reservation () {
   });
 }
 
-function enregistrement () {
-    $.ajax ({
-        url: 'http://localhost/incription.php',
-        type: 'GET',
-        success: function success (result) {
-            for(var i = 0; i < result.length; i++) {
-                $("#products").append(`<select><option value="title">` + result[i].title + `</option>`);  //pour les append tjs mettre l'nesemble du code en AltGr+7 et aussi les variables
-                
-        
-            }
-        },
-    
-        error: function error (erreur) {
-          console.log (erreur);
-        },
-      });
-    }
+function enregistrement () { // cette fonction va permettre d'actualiser la liste des appartements disponibles
+  $.ajax ({
+    url: 'http://localhost/SylvainYahia/reservation/inscription.php',
+    type: 'GET',
+    success: function success (result) {
+      result = JSON.parse (result); 
+      for (var i = 0; i < result.length; i++) {
+        $ ('#selection').append (
+          `<option value="` +
+            result[i].titre +
+            `">` +
+            result[i].titre +
+            `</option>` 
+        ); 
+      }
+    },
+
+    error: function error (erreur) {
+      console.log (erreur);
+    },
+  });
+}
+
+
+function selectChange (select) { 
+  alert(select.value); 
 }
